@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root{
+  
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('../src/assets/font/Inter_18pt-Regular.ttf');
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url('../src/assets/font/DMSans_18pt-Regular.ttf');
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url('../src/assets/font/Unbounded-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@theme {
+ 
+  --font-inter: 'Inter', sans-serif;
+  --font-dmsans: 'DM Sans', sans-serif;
+  --font-unbounded: 'Unbounded', sans-serif;
+}
+ 
+
+html,
+body {
+  font-family: var(--font-inter);
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  max-width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: #000000;
+
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  transform-origin: center;
+}
+
+.hamburger {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  padding: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(3px) rotate(45deg);
+   z-index: 1000;
+}
+.hamburger.active .bar:nth-child(2) {
+  transform: translateY(-8px) rotate(-45deg);
+   z-index: 1000;
+}
+.logo{
+  z-index: 1000;
+}
+.hero-container{
+  background-image: url(./assets/images/bg-black.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
