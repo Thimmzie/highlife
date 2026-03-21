@@ -15,8 +15,8 @@ const features = () => {
           We explain them
         </h1>
       </div>
-      <div className="card-container grid grid-cols-1 lg:grid-cols-2 items-center px-8 mt-8 gap-12">
-        <div className=" min-h-[420px] pb-1.5 bg-[#ffff] rounded-2xl w-[80vw] sm:w-[50vw] lg:w-[35vw] pt-1.5 card">
+      <div className="card-container grid grid-cols-1 lg:grid-cols-2 items-center px-4 mt-8 gap-12">
+        <div className=" min-h-[420px] pb-1.5 bg-[#ffff] rounded-2xl w-full sm:w-[50vw] lg:w-[35vw] pt-1.5 card">
           <img className="rounded-2xl px-1.5  w-full object-cover" src={One} />
           <div className="px-4 pt-4">
             <h1 className="font-extrabold text-[1rem]">Smart Insights</h1>
@@ -26,7 +26,7 @@ const features = () => {
             </p>
           </div>
         </div>
-        <div className="min-h-[420px]  bg-[#ffff] rounded-2xl w-[80vw] pt-1.5 sm:w-[50vw] lg:w-[35vw]  card">
+        <div className="min-h-[420px]  bg-[#ffff] rounded-2xl w-full pt-1.5 sm:w-[50vw] lg:w-[35vw]  card">
           <img className="rounded-2xl px-1.5" src={Two} />
           <div className="px-4 pt-4">
             <h1 className="font-extrabold text-[1rem]">
@@ -38,7 +38,7 @@ const features = () => {
             </p>
           </div>
         </div>
-        <div className="min-h-[420px]  bg-[#ffff] rounded-2xl w-[80vw] pt-1.5 sm:w-[50vw] lg:w-[35vw]  card">
+        <div className="min-h-[420px]  bg-[#ffff] rounded-2xl w-full pt-1.5 sm:w-[50vw] lg:w-[35vw]  card">
           <img className="rounded-2xl px-1.5" src={Three} />
           <div className="px-4 pt-4">
             <h1 className="font-extrabold text-[1rem]">Simulation Mode</h1>
@@ -48,7 +48,7 @@ const features = () => {
             </p>
           </div>
         </div>
-        <div className="min-h-[420px]  bg-[#ffff] rounded-2xl w-[80vw] pt-1.5 sm:w-[50vw] lg:w-[35vw]  card">
+        <div className="min-h-[420px]  bg-[#ffff] rounded-2xl w-full pt-1.5 sm:w-[50vw] lg:w-[35vw]  card">
           <img className="rounded-2xl px-1.5" src={Four} />
           <div className="px-4 pt-4">
             <h1 className="font-extrabold text-[1rem]">Smart Health Scoring</h1>
