@@ -56,11 +56,12 @@ const navbar = () => {
         opacity: 0,
         stagger: 0.1,
         duration: 0.4,
+        delay: 0.1,
         ease: 'power3.inOut',
       });
       tl.to(
         buttonRef.current,
-        { y: 40, opacity: 0, duration: 0.4, delay: 0.2, ease: 'power3.inOut' },
+        { y: 40, opacity: 0, duration: 0.4, ease: 'power3.inOut' },
         '-=0.3',
       );
       tl.to(overlayRef.current, { opacity: 0, duration: 0.3 }, '-=0.3');
@@ -130,7 +131,7 @@ const navbar = () => {
       </div>
       {menuVisible && (
         <div
-          className={`fixed inset-0 transition-opacity duration-300 ${menuVisible ? 'opacity-100' : 'opacity-0'} bg-black`}
+          className={`fixed z-[999] inset-0 transition-opacity duration-300 ${menuVisible ? 'opacity-100' : 'opacity-0'} bg-black`}
         >
           <div>
             <div>
