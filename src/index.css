@@ -83,27 +83,19 @@ body {
   background-size: cover;
   min-height: 100dvh;
 }
-.card {
+/* .card {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  /* margin: 0 auto;
+  margin: 0 auto;
   position: sticky;
-  top: 20px; */
+  top: 20px;
    transition: transform 0.3s ease, scale 0.3s ease;
-}
+} */
 .card-container{
  padding-bottom: 200px;
 
 
 }
-/* .card:nth-child(2) {
-  top: 40px;
-   transform: scale(0.97);
-}
-.card:nth-child(3) {
-  top: 60px;
-    transform: scale(0.94);
-}
-.card:nth-child(4) {
-  top: 80px;
-   transform: scale(0.91);
-} */
+.card-bg {
+    background: linear-gradient(to bottom, #2f0474 0%, #8b8b8b 100%);
+  }
+ 
