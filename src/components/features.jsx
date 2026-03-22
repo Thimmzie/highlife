@@ -17,7 +17,7 @@ const features = () => {
   const cardsRef = useRef(null);
 
   return (
-    <div className="bg-[#d3d3d3] px-3 pt-6">
+    <div className="bg-[#d3d3d3] px-3 pt-6 lg:px-40">
       <div className="card-bg min-h-[80vh] w-full rounded-lg pt-8 px-3">
         <div className="flex flex-col items-center">
           <h1 className="text-[#cfcfcf] font-extrabold feature-text">
@@ -31,18 +31,22 @@ const features = () => {
           <Swiper
             modules={[Scrollbar]}
             slidesPerView={1.2}
-            spaceBetween={12}
+            breakpoints={{
+              640: { slidesPerView: 1.2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3.5 },
+            }}
+            spaceBetween={16}
             loop={true}
           >
             <SwiperSlide>
-              <div className=" h-[40vh] pb-1.5 bg-[#ffff] rounded-2xl w-[60vw] lg:w-[35vw] pt-1.5 card">
-                <img
-                  className="rounded-2xl px-1.5  w-full object-cover"
-                  src={One}
-                />
+              <div className="min-h-[400px] bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 card flex flex-col">
+                <img className="rounded-2xl px-1.5" src={One} />
                 <div className="px-4 pt-4">
-                  <h1 className="font-extrabold text-[1rem]">Smart Insights</h1>
-                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4">
+                  <h1 className="font-extrabold text-[1rem] line-clamp-2 min-h-[2.5rem]">
+                    Smart Insights
+                  </h1>
+                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4 line-clamp-5">
                     Get clear, personalized insights that reveal how your sleep,
                     nutrition, and activity affect your energy and productivity.
                   </p>
@@ -50,13 +54,13 @@ const features = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[40vh]  bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 lg:w-[35vw] card">
+              <div className="min-h-[400px] bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 card flex flex-col">
                 <img className="rounded-2xl px-1.5" src={Two} />
                 <div className="px-4 pt-4">
-                  <h1 className="font-extrabold text-[1rem]">
+                  <h1 className="font-extrabold text-[1rem] line-clamp-2 min-h-[2.5rem] ">
                     Interactive Health Dashboard
                   </h1>
-                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4">
+                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4 line-clamp-5">
                     See how your energy flows, how your habits connect, and
                     where things need improvement.
                   </p>
@@ -64,13 +68,13 @@ const features = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[40vh]  bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 lg:w-[35vw]  card">
+              <div className="min-h-[400px] bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 card flex flex-col">
                 <img className="rounded-2xl px-1.5" src={Three} />
                 <div className="px-4 pt-4">
-                  <h1 className="font-extrabold text-[1rem]">
+                  <h1 className="font-extrabold text-[1rem] line-clamp-2 min-h-[2.5rem]">
                     Simulation Mode
                   </h1>
-                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4">
+                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4 line-clamp-5">
                     Adjust your habits and instantly see how your energy,
                     productivity, and well-being could change.
                   </p>
@@ -78,13 +82,13 @@ const features = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[40vh]  bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 lg:w-[35vw]  card">
+              <div className="min-h-[400px] bg-[#ffff] rounded-2xl w-[60vw] pt-1.5 card flex flex-col">
                 <img className="rounded-2xl px-1.5" src={Four} />
                 <div className="px-4 pt-4">
-                  <h1 className="font-extrabold text-[1rem]">
+                  <h1 className="font-extrabold text-[1rem] line-clamp-2 min-h-[2.5rem]">
                     Smart Health Scoring
                   </h1>
-                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4">
+                  <p className="text-[0.8rem] text-[#4e4e4e] leading-7 pt-4 line-clamp-5">
                     Get calculated scores for Energy, Productivity, Nutrition,
                     and Burnout Risk — all powered by your inputs.
                   </p>

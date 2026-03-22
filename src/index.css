@@ -83,13 +83,7 @@ body {
   background-size: cover;
   min-height: 100dvh;
 }
-/* .card {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
-  position: sticky;
-  top: 20px;
-   transition: transform 0.3s ease, scale 0.3s ease;
-} */
+
 .card-container{
  padding-bottom: 200px;
 
@@ -98,4 +92,6 @@ body {
 .card-bg {
     background: linear-gradient(to bottom, #2f0474 0%, #8b8b8b 100%);
   }
- 
+ .card {
+  
+}
