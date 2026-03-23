@@ -106,16 +106,6 @@ const features = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="flex flex-col items-center pt-10 bg-[#777777]">
-        <h1 className="text-[#cfcfcf] font-extrabold feature-text">
-          Not just tracking your habits
-        </h1>
-        <h1 className="text-[#ffff] font-extrabold text-[1.5rem] feature-text">
-          We explain them
-        </h1>
-      </div> */}
-      <div className="card-container grid grid-cols-1 lg:grid-cols-2 place-items-center px-4 mt-8 gap-12 sm:px-12 md:px-16"></div>
     </div>
   );
 };

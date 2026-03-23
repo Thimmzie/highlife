@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-
+import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/full-logoo.png';
 
 const navbar = () => {
@@ -74,6 +74,8 @@ const navbar = () => {
     }
   }, [sidemenu, menuVisible]);
 
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="flex items-center justify-between px-4 py-4 -mt-3 md:px-6">
@@ -113,7 +115,10 @@ const navbar = () => {
         </div>
 
         <div className="hidden lg:block">
-          <button className="bg-[#2f0474] font-unbounded w-[11vw] h-[7vh] rounded-4xl text-[#ffffff] text-[0.8rem] cursor-pointer hover:bg-[#220550] transition-all duration-500">
+          <button
+            onClick={() => navigate('/login')}
+            className="bg-[#2f0474] font-unbounded w-[11vw] h-[7vh] rounded-4xl text-[#ffffff] text-[0.8rem] cursor-pointer hover:bg-[#220550] transition-all duration-500"
+          >
             Try Demo
           </button>
         </div>
@@ -154,6 +159,7 @@ const navbar = () => {
             </div>
             <div className="mt-70 mx-8 md:mx-25">
               <button
+                onClick={() => navigate('/login')}
                 ref={buttonRef}
                 className="bg-[#2f0474] font-unbounded w-full h-[7vh] rounded-4xl text-[#ffffff]"
               >
