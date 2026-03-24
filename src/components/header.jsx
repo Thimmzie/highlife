@@ -21,7 +21,7 @@ const header = ({ sideBarCollapsed, onToggleSidebar }) => {
             <Menu className="w-5 h-5" />
           </button>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <h1 className="font-dmsans text-2xl font-black text-slate-800 dark:text-white">
               Dashboard
             </h1>
@@ -40,20 +40,20 @@ const header = ({ sideBarCollapsed, onToggleSidebar }) => {
               placeholder="Search"
               className="w-full pl-10 font-dmsans pr-4 py-2.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all "
             />
-            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+            {/* <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
               <Filter />
-            </button>
+            </button> */}
           </div>
         </div>
 
         <div className="flex items-center space-x-3">
-          <button className="hidden lg:flex items-center space-x-2 py-2 px-4 bg-gradient-to-r from-[#5e35a1] to-[#2f0474] text-white rounded-xl hover:shadow-lg transition-all">
+          {/* <button className="hidden lg:flex items-center space-x-2 py-2 px-4 bg-gradient-to-r from-[#5e35a1] to-[#2f0474] text-white rounded-xl hover:shadow-lg transition-all">
             <Plus className="w-4 h-4" />
             <span className="text-sm font-medium font-dmsans ">New</span>
-          </button>
-          <button className="p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          </button> */}
+          {/* <button className="p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
             <Sun className="w-5 h-5 " />
-          </button>
+          </button> */}
           {/* you can have notification here and settings */}
           {/* user profile, you can move to a different component that will be under menu later on */}
           <div className="flex items-center space-x-3 pl-3 border-l border-slate-200 dark:border-slate-700">
@@ -66,11 +66,8 @@ const header = ({ sideBarCollapsed, onToggleSidebar }) => {
               <p className="font-dmsans text-sm font-medium text-slate-500 dark:text-slate-400">
                 {user?.displayName}
               </p>
-              <p className="font-dmsans text-xs text-slate-500 dark:text-slate-400 ">
-                Administrator
-              </p>
             </div>
-            <ChevronDown className="w-4 h-4 text-slate-400" />
+            {/* <ChevronDown className="w-4 h-4 text-slate-400" /> */}
           </div>
         </div>
       </div>

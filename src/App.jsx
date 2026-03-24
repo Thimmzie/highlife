@@ -17,13 +17,12 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(authentication, (currentUser) => {
       meetUser(currentUser); // update Zustand
-      setLoading(false); // stop spinner
+      setLoading(false);
     });
 
     return () => unsubscribe();
   }, [meetUser]);
 
-  // ScrollToTop hook
   function ScrollToTop() {
     const { pathname } = useLocation();
     useEffect(() => {
@@ -32,7 +31,6 @@ function App() {
     return null;
   }
 
-  // get current user from Zustand
   const user = useUserStore((state) => state.user);
 
   return (
@@ -42,7 +40,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        {/* <Route path="/dashboard" element={user ? <Dashboard /> : <Login />} /> */}
+        <Route path="/dashboard" element={user ? <Dashboard /> : <Login />} />
         <Route
           path="/dashboard"
           element={
