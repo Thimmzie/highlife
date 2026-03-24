@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/images/full-logoo.png';
 
-const navbar = () => {
+const navbar = ({ goToLogin }) => {
   const [sidemenu, setSidemenu] = useState('');
   const [menuVisible, setMenuVisible] = useState(false);
   const menuItemsRef = useRef([]);
@@ -116,7 +116,7 @@ const navbar = () => {
 
         <div className="hidden lg:block">
           <button
-            onClick={() => navigate('/login')}
+            onClick={goToLogin}
             className="bg-[#2f0474] font-unbounded w-[11vw] h-[7vh] rounded-4xl text-[#ffffff] text-[0.8rem] cursor-pointer hover:bg-[#220550] transition-all duration-500"
           >
             Try Demo
@@ -159,7 +159,7 @@ const navbar = () => {
             </div>
             <div className="mt-70 mx-8 md:mx-25">
               <button
-                onClick={() => navigate('/login')}
+                onClick={goToLogin}
                 ref={buttonRef}
                 className="bg-[#2f0474] font-unbounded w-full h-[7vh] rounded-4xl text-[#ffffff]"
               >

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 // import Heroimg from '../assets/images/white-dashh.jpg';
 
-const hero = () => {
+const hero = ({ goToLogin }) => {
   useEffect(() => {
     gsap.fromTo(
       '.head',
@@ -36,7 +36,10 @@ const hero = () => {
           productivity in real time.
         </p>
         <div className="hero-btn">
-          <button className=" bg-[#2f0474] font-unbounded w-[50vw] h-[6vh] rounded-4xl text-[#ffff] mt-7 text-[0.9rem] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] hover:bg-[#ffff] hover:text-[#2f0474] transition-all duration-500">
+          <button
+            onClick={goToLogin}
+            className=" bg-[#2f0474] font-unbounded w-[50vw] h-[7vh] rounded-4xl text-[#ffff] mt-7 text-[0.9rem] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] hover:bg-[#ffff] hover:text-[#2f0474] transition-all duration-500"
+          >
             Try Demo
           </button>
         </div>

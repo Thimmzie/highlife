@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Login from '../components/login';
 
 const login = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
   return (
     <>
-      <Login />
-      {/* <GoogleLogin
-        onSuccess={(credentialResponse) => {
-          console.log(credentialResponse);
-          console.log(credentialResponse);
-        }}
-        onError={() => console.log('Login Failed')}
-      /> */}
+      <div
+        className={`transition-all duration-500 ease-out transform ${
+          show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        }`}
+      >
+        <Login />
+      </div>
     </>
   );
 };

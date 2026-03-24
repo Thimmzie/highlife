@@ -1,33 +1,39 @@
 import './App.css';
-import { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { authentication } from './firebase-config';
-import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useUserStore } from '../src/store/userstore';
+import Loading from './components/loading';
 import Landing from './pages/landing';
 import Login from './pages/loginpage';
 import Dashboard from './pages/dashboard';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const meetUser = useUserStore((state) => state.setUser);
+
+  // track Firebase auth once
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(authentication, (currentUser) => {
+      meetUser(currentUser); // update Zustand
+      setLoading(false); // stop spinner
+    });
+
+    return () => unsubscribe();
+  }, [meetUser]);
+
+  // ScrollToTop hook
   function ScrollToTop() {
     const { pathname } = useLocation();
-
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [pathname]);
-
     return null;
   }
 
-  const SignInWithGoogle = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(authentication, provider)
-      .then((re) => {
-        console.log(re);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // get current user from Zustand
+  const user = useUserStore((state) => state.user);
 
   return (
     <>
@@ -35,7 +41,18 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        {/* <Route path="/dashboard" element={user ? <Dashboard /> : <Login />} /> */}
+        <Route
+          path="/dashboard"
+          element={
+            useUserStore.getState().user ? (
+              <Dashboard />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
       </Routes>
     </>
   );
