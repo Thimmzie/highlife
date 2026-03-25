@@ -43,7 +43,7 @@ const Charts = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* Energy Trend */}
       <div className="h-64 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700">
-        <h2 className="text-lg font-bold mb-4 text-slate-800 dark:text-white">
+        <h2 className="text-lg font-dmsans font-bold mb-4 text-slate-800 dark:text-white">
           Energy Trend
         </h2>
         <ResponsiveContainer width="100%" height={250}>
@@ -62,7 +62,7 @@ const Charts = () => {
 
       {/* Calories Overview */}
       <div className="h-64 p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700">
-        <h2 className="text-lg font-bold mb-4 text-slate-800 dark:text-white">
+        <h2 className="text-lg font-dmsans font-bold mb-4 text-slate-800 dark:text-white">
           Calories Overview
         </h2>
         <ResponsiveContainer width="100%" height={250}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStore } from '../store/userstore';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Insightspanel = () => {
   // Get the raw state from the store
@@ -17,18 +18,24 @@ const Insightspanel = () => {
 
   return (
     <div className="p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700">
-      <h2 className="text-lg font-bold mb-4 text-slate-800 dark:text-white">
+      <h2 className="text-lg font-dmsans font-bold mb-4 text-slate-800 dark:text-white">
         Insights
       </h2>
       <div className="space-y-3">
-        {insights.map((item, index) => (
-          <div
-            key={index}
-            className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm"
-          >
-            {item}
-          </div>
-        ))}
+        <AnimatePresence mode="popLayout">
+          {insights.map((item, index) => (
+            <motion.div
+              key={item} // IMPORTANT: use item, not index
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+              className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-dmsans dark:text-white"
+            >
+              {item}
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </div>
   );

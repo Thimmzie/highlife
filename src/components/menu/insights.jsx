@@ -49,15 +49,15 @@ const Insights = () => {
   return (
     <div className="flex flex-col gap-8 p-4">
       {/* Textual Insights */}
-      <div className="p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700">
-        <h2 className="text-lg font-bold mb-4 text-slate-800 dark:text-white">
+      <div className="p-4 rounded-2xl font-dmsans bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700">
+        <h2 className="text-lg font-bold mb-4 text-slate-800 font-dmsans dark:text-white">
           Insights
         </h2>
         <div className="space-y-3">
           {insights.map((item, idx) => (
             <div
               key={idx}
-              className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm"
+              className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-dmsans dark:text-white"
             >
               {item}
             </div>
@@ -67,7 +67,9 @@ const Insights = () => {
 
       {/* Summary Over Time (Line Chart) */}
       <div className="w-full h-[250px] bg-white/80 dark:bg-slate-900/80 rounded-xl p-4 shadow">
-        <h2 className="text-lg font-semibold mb-2">Summary Over Time</h2>
+        <h2 className="text-lg font-semibold font-dmsans mb-2 dark:text-white">
+          Summary Over Time
+        </h2>
         <ResponsiveContainer width="100%" height={200}>
           <LineChart data={summaryData}>
             <XAxis dataKey="time" />
@@ -85,7 +87,9 @@ const Insights = () => {
 
       {/* Recommendations (Bar Chart) */}
       <div className="w-full h-[250px] bg-white/80 dark:bg-slate-900/80 rounded-xl p-4 shadow">
-        <h2 className="text-lg font-semibold mb-2">Recommendations</h2>
+        <h2 className="text-lg font-dmsans font-semibold mb-2 dark:text-white">
+          Recommendations
+        </h2>
         <ResponsiveContainer width="100%" height={200}>
           <BarChart data={recommendationsData}>
             <XAxis dataKey="label" />

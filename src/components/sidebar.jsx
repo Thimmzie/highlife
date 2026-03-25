@@ -1,6 +1,7 @@
 import React from 'react';
 import { useUserStore } from '../store/userstore';
 import Logo from '../assets/images/full-logoo.png';
+import DarkLogo from '../assets/images/black-logoo.png';
 import { menuItems } from '../../constant/index';
 import { Activity, Menu, X } from 'lucide-react';
 
@@ -31,7 +32,8 @@ const sidebar = ({ collapsed, onToggle, currentPage, onPageChange }) => {
         </button>
       </div>
 
-      <img className="w-full object-contain" src={Logo} />
+      <img className="w-full object-contain dark:block" src={Logo} />
+      <img className="w-full object-contain dark:hidden " src={DarkLogo} />
 
       <div className="p-6 border-b border-slate-200/50 dark:border-slate-700/50">
         <div className="flex items-center space-x-3">

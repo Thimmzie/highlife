@@ -1,6 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useStore } from '../store/userstore';
 import { Activity, Brain, Utensils, Flame } from 'lucide-react';
+import { motion, animate } from 'framer-motion';
+
+const AnimatedNumber = ({ value }) => {
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    const controls = animate(display, value, {
+      duration: 0.6,
+      onUpdate: (v) => setDisplay(Math.round(v)),
+    });
+
+    return () => controls.stop();
+  }, [value]);
+
+  return <span>{display}%</span>;
+};
 
 const Summarycards = () => {
   const sleep = useStore((state) => state.sleep);
@@ -21,25 +37,25 @@ const Summarycards = () => {
     return [
       {
         title: 'Energy',
-        value: `${energy}%`,
+        value: energy,
         icon: Activity,
         color: 'from-green-400 to-emerald-500',
       },
       {
         title: 'Productivity',
-        value: `${productivity}%`,
+        value: productivity,
         icon: Brain,
         color: 'from-blue-400 to-indigo-500',
       },
       {
         title: 'Nutrition',
-        value: `${nutrition}%`,
+        value: nutrition,
         icon: Utensils,
         color: 'from-orange-400 to-yellow-500',
       },
       {
         title: 'Burnout Risk',
-        value: `${burnout}%`,
+        value: burnout,
         icon: Flame,
         color: 'from-red-400 to-pink-500',
       },
@@ -50,10 +66,17 @@ const Summarycards = () => {
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {cards.map((card, index) => {
         const Icon = card.icon;
+
         return (
-          <div
+          <motion.div
             key={index}
-            className="p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-2xl hover:-translate-y-1 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300 transform"
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05, y: -5 }}
+            whileTap={{ scale: 0.97 }}
+            className="p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200 dark:border-slate-700 shadow-md hover:shadow-2xl hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300"
           >
             <div className="flex items-center justify-between">
               <p className="text-sm font-dmsans text-slate-500">{card.title}</p>
@@ -61,10 +84,11 @@ const Summarycards = () => {
                 <Icon className="w-4 h-4 text-white" />
               </div>
             </div>
-            <h2 className="text-2xl font-bold text-slate-800 dark:text-white mt-2">
-              {card.value}
+
+            <h2 className="text-2xl font-dmsans font-bold text-slate-800 dark:text-white mt-2">
+              <AnimatedNumber value={card.value} />
             </h2>
-          </div>
+          </motion.div>
         );
       })}
     </div>

@@ -14,12 +14,16 @@ const Simulationpanel = () => {
 
   return (
     <div className="p-4 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700">
-      <h2 className="text-lg font-bold mb-4">Simulation</h2>
+      <h2 className="text-lg font-dmsans font-bold mb-4 dark:text-white">
+        Simulation
+      </h2>
 
       <div className="space-y-4">
         {/* Sleep */}
         <div>
-          <p className="text-sm">Sleep: {sleep} hrs</p>
+          <p className="text-sm font-dmsans dark:text-white">
+            Sleep: {sleep} hrs
+          </p>
           <input
             type="range"
             min="0"
@@ -32,7 +36,9 @@ const Simulationpanel = () => {
 
         {/* Activity */}
         <div>
-          <p className="text-sm">Activity: {activity}</p>
+          <p className="text-sm font-dmsans dark:text-white">
+            Activity: {activity}
+          </p>
           <input
             type="range"
             min="0"
@@ -45,7 +51,9 @@ const Simulationpanel = () => {
 
         {/* Calories */}
         <div>
-          <p className="text-sm">Calories: {calories}</p>
+          <p className="text-sm font-dmsans dark:text-white">
+            Calories: {calories}
+          </p>
           <input
             type="range"
             min="1000"
@@ -58,7 +66,9 @@ const Simulationpanel = () => {
 
         {/* Work */}
         <div>
-          <p className="text-sm">Work: {work} hrs</p>
+          <p className="text-sm font-dmsans dark:text-white">
+            Work: {work} hrs
+          </p>
           <input
             type="range"
             min="0"
