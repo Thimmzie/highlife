@@ -67,12 +67,12 @@ const login = () => {
           <p className="bg-[#2f0474] mt-2 text-[0.6rem] px-4 py-1.5 text-[#ffff] rounded-2xl font-inter">
             Coming soon
           </p>
-          <p className="mt-6 text-[0.9rem] font-dmsans">
+          {/* <p className="mt-6 text-[0.9rem] font-dmsans">
             Already have an account?
             <a href="#">
               <span className="pl-1.5 text-[#2f0474]">Sign in</span>
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </>

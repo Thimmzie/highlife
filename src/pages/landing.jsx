@@ -56,7 +56,7 @@ const landing = () => {
       >
         <Navbar goToLogin={goToLogin} />
         <Hero goToLogin={goToLogin} />
-        <Features />
+        {/* <Features /> */}
       </div>
     </>
   );

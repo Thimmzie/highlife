@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
+import Heroimg from '../assets/images/hero-img.png';
 // import Heroimg from '../assets/images/white-dashh.jpg';
 
 const hero = ({ goToLogin }) => {
@@ -24,13 +25,13 @@ const hero = ({ goToLogin }) => {
   }, []);
 
   return (
-    <div className="pt-10 hero-container">
-      <div className="flex flex-col justify-center items-center">
+    <div className="pt-20 lg:pt-5 hero-container relative">
+      <div className="flex flex-col justify-center items-center ">
         <h1 className=" head text-[1.3rem] text-[#ffff] text-center font-extrabold font-unbounded leading-10">
           Understand Your Habits. <br />
           Transform Your Life.
         </h1>
-        <p className="body text-[0.9rem] text-[#ffff] text-center font-normal font-unbounded leading-10 mt-5 px-4 sm:px-20 md:px-50 ">
+        <p className="body text-[0.9rem] text-[#ffff] text-center font-normal font-unbounded leading-10 lg:mt-2 px-4 sm:px-20 md:px-50 ">
           Track your nutrition, sleep, and activity and see{' '}
           <br className="hidden lg:block" /> how they affect your energy and
           productivity in real time.
@@ -43,7 +44,12 @@ const hero = ({ goToLogin }) => {
             Try Demo
           </button>
         </div>
-        <div>{/* <img src={Heroimg} /> */}</div>
+        <div className="absolute bottom-0 px-2">
+          <img
+            className="lg:w-[55vw] rounded-tr-2xl rounded-tl-2xl border-2  border-[#c5c5c5]"
+            src={Heroimg}
+          />
+        </div>
       </div>
     </div>
   );
