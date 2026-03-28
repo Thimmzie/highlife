@@ -81,7 +81,31 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100dvh;
+  /* height: 100dvh; */
+  overflow: hidden;
+  height: 87vh;
+}
+@media (min-width:768px) {
+  .hero-container{
+  background-image: url(./assets/images/bg-black.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100dvh;
+  overflow: hidden;
+  /* height: 85vh; */
+}
+}
+@media (min-width:1024px) {
+  .hero-container{
+  background-image: url(./assets/images/bg-black.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100dvh;
+  overflow: hidden;
+  /* height: 85vh; */
+}
 }
 
 .card-container{
