@@ -37,7 +37,8 @@ body {
   overflow-y: auto;
   box-sizing: border-box;
   background-color: #000000;
-
+  margin: 0;
+  overflow: hidden;
 }
 
 .bar {
@@ -84,6 +85,12 @@ body {
   /* height: 100dvh; */
   overflow: hidden;
   min-height: 85vh;
+  min-height: 85dvh;
+}
+.imgg{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 @media (min-width:768px) {
   .hero-container{

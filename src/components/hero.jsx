@@ -46,7 +46,7 @@ const hero = ({ goToLogin }) => {
         </div>
         <div className="md:absolute md:bottom-0 px-2 mt-[8.7rem]">
           <img
-            className="w-[90vw] lg:w-[55vw] rounded-tr-2xl rounded-tl-2xl border-2  border-[#c5c5c5]"
+            className="w-[90vw] lg:w-[55vw] rounded-tr-2xl rounded-tl-2xl border-2  border-[#c5c5c5] imgg"
             src={Heroimg}
           />
         </div>
