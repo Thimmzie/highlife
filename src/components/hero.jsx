@@ -25,7 +25,7 @@ const hero = ({ goToLogin }) => {
   }, []);
 
   return (
-    <div className="pt-10 lg:pt-5 hero-container relative ">
+    <div className="pt-10 lg:pt-5 hero-container md:relative ">
       <div className="flex flex-col justify-center items-center">
         <h1 className=" head text-[1.3rem] text-[#ffff] text-center font-extrabold font-unbounded leading-10">
           Understand Your Habits. <br />
@@ -34,7 +34,7 @@ const hero = ({ goToLogin }) => {
         <p className="body text-[0.9rem] text-[#ffff] text-center font-normal font-unbounded leading-10 mt-4 lg:mt-2 px-4 sm:px-20 md:px-50 ">
           Track your nutrition, sleep, and activity and see{' '}
           <br className="hidden lg:block" /> how they affect your energy and
-          productivity in real time.
+          productivity in real time. ghjki
         </p>
         <div className="hero-btn">
           <button
@@ -44,7 +44,7 @@ const hero = ({ goToLogin }) => {
             Try Demo
           </button>
         </div>
-        <div className="absolute bottom-0 px-2">
+        <div className="md:absolute md:bottom-0 px-2 mt-[8.7rem]">
           <img
             className="w-[90vw] lg:w-[55vw] rounded-tr-2xl rounded-tl-2xl border-2  border-[#c5c5c5]"
             src={Heroimg}
