@@ -34,7 +34,7 @@ const hero = ({ goToLogin }) => {
         <p className="body text-[0.9rem] text-[#ffff] text-center font-normal font-unbounded leading-10 mt-4 lg:mt-2 px-4 sm:px-20 md:px-50 ">
           Track your nutrition, sleep, and activity and see{' '}
           <br className="hidden lg:block" /> how they affect your energy and
-          productivity in real time. changeeeeeeee
+          productivity in real time.
         </p>
         <div className="hero-btn">
           <button
