@@ -28,16 +28,20 @@
 }
  
 
-html,
+html{
+   overflow-y: scroll;
+  /* scrollbar-gutter: stable; */
+}
 body {
   font-family: var(--font-unbounded);
   scroll-behavior: smooth;
   overflow-x: hidden !important;
   max-width: 100%;
-  overflow-y: auto;
+  /* overflow-y: scroll; */
   box-sizing: border-box;
   background-color: #000000;
   margin: 0;
+  /* scrollbar-gutter: stable; */
 
 }
 

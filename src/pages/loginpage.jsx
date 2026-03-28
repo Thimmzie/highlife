@@ -11,7 +11,7 @@ const login = () => {
   return (
     <>
       <div
-        className={`transition-all duration-500 ease-out transform ${
+        className={`transition-opacity transition-transform duration-500 ease-in-out ${
           show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
         }`}
       >

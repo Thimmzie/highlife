@@ -22,6 +22,14 @@ const hero = ({ goToLogin }) => {
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 0.7 },
     );
+    gsap.fromTo(
+      '.imgg',
+      {
+        opacity: 0,
+        y: 30,
+      },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 0.9 },
+    );
   }, []);
 
   return (
@@ -39,7 +47,7 @@ const hero = ({ goToLogin }) => {
         <div className="hero-btn">
           <button
             onClick={goToLogin}
-            className=" bg-[#2f0474] font-unbounded w-[50vw] h-[7vh] rounded-4xl text-[#ffff] mt-7 text-[0.9rem] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] hover:bg-[#ffff] hover:text-[#2f0474] transition-all duration-500"
+            className=" bg-[#2f0474] font-unbounded w-[50vw] h-[7vh] rounded-4xl text-[#ffff] mt-7 text-[0.9rem] sm:w-[30vw] md:w-[20vw] lg:w-[15vw] hover:bg-[#ffff] hover:text-[#2f0474] transition-all duration-500 cursor-pointer"
           >
             Try Demo
           </button>
