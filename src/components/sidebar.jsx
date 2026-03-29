@@ -21,9 +21,10 @@ const sidebar = ({ collapsed, onToggle, currentPage, onPageChange }) => {
     lg:relative
 
    
-    fixed top-0 left-0 h-full z-30
-    transform ${collapsed ? '-translate-x-full lg:translate-x-0' : 'translate-x-0'}
-    transition-transform duration-300 ease-in-out
+   fixed top-0 left-0 h-full z-30
+transform ${collapsed ? '-translate-x-full' : 'translate-x-0'}
+transition-transform duration-300 ease-in-out
+lg:relative lg:translate-x-0
   `}
     >
       <div className="lg:hidden flex justify-end p-4">

@@ -81,7 +81,7 @@ const login = () => {
           </p>
 
           <button
-            // onClick={() => navigate('/dashboard')}
+            onClick={() => navigate('/dashboard')}
             className="mt-6 flex justify-center items-center gap-3 w-full border border-[#bdbdbd] h-[7vh] rounded-lg lg:bg-[#ffffff] cursor-pointer"
           >
             <FaApple size={25} />

@@ -21,18 +21,20 @@ const header = ({ sideBarCollapsed, onToggleSidebar }) => {
             <Menu className="w-5 h-5" />
           </button>
 
-          <div className="hidden lg:block">
-            <h1 className="font-dmsans text-2xl font-black text-slate-800 dark:text-white">
-              Dashboard
+          <div className="">
+            <h1 className="font-dmsans text-2xl font-black text-slate-800 dark:text-white hidden md:block">
+              My Dashboard
             </h1>
-            <p className="font-dmsans text-white">
-              Welcome back, {user?.displayName?.split(' ')[0]}! here's what's
-              happening today
+            <p className="font-dmsans text-white ">
+              Welcome back, {user?.displayName?.split(' ')[0]}!{' '}
+              <span className="hidden md:inline-block">
+                here's what's happening today
+              </span>
             </p>
           </div>
         </div>
 
-        <div className="flex-1 max-w-md mx-8">
+        {/* <div className="flex-1 max-w-md mx-8">
           <div className="relative">
             <Search className="w-4 h-4 text-white absolute left-3 top-1/2 transform -translate-y-1/2" />
             <input
@@ -40,11 +42,11 @@ const header = ({ sideBarCollapsed, onToggleSidebar }) => {
               placeholder="Search"
               className="w-full pl-10 font-dmsans pr-4 py-2.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-800 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all "
             />
-            {/* <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
               <Filter />
-            </button> */}
+            </button>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex items-center space-x-3">
           {/* <button className="hidden lg:flex items-center space-x-2 py-2 px-4 bg-gradient-to-r from-[#5e35a1] to-[#2f0474] text-white rounded-xl hover:shadow-lg transition-all">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './sidebar';
 import Header from './header';
 import Dash from './menu/dash';
@@ -7,8 +7,16 @@ import Profile from './menu/profile';
 import Simulation from './menu/simulation';
 
 const dashboard = () => {
-  const [sideBarCollapsed, setSideBarCollapse] = useState(false);
+  const [sideBarCollapsed, setSideBarCollapse] = useState(true);
   const [currentPage, setCurrentPage] = useState('dashboard');
+
+  useEffect(() => {
+    if (window.innerWidth >= 1024) {
+      setSideBarCollapse(false);
+    } else {
+      setSideBarCollapse(true);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:t0-slate-900 transition-all duration-500">
@@ -19,6 +27,12 @@ const dashboard = () => {
           currentPage={currentPage}
           onPageChange={setCurrentPage}
         />
+        {!sideBarCollapsed && (
+          <div
+            className="fixed inset-0 bg-black/30 z-20 lg:hidden"
+            onClick={() => setSideBarCollapse(true)}
+          />
+        )}
         <div className="flex-1 flex flex-col overflow-hidden">
           <Header
             sideBarCollapsed={sideBarCollapsed}
