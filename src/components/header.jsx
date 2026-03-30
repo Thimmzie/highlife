@@ -25,7 +25,7 @@ const header = ({ sideBarCollapsed, onToggleSidebar }) => {
             <h1 className="font-dmsans text-2xl font-black text-slate-800 dark:text-white hidden md:block">
               My Dashboard
             </h1>
-            <p className="font-dmsans text-white ">
+            <p className="font-dmsans text-slate-800 dark:text-white ">
               Welcome back, {user?.displayName?.split(' ')[0]}!{' '}
               <span className="hidden md:inline-block">
                 here's what's happening today

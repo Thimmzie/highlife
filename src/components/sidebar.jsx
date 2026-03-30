@@ -1,7 +1,7 @@
 import React from 'react';
 import { useUserStore } from '../store/userstore';
 import Logo from '../assets/images/full-logoo.png';
-import DarkLogo from '../assets/images/black-logoo.png';
+import DarkLogo from '../assets/images/blackk-logo.png';
 import { menuItems } from '../../constant/index';
 import { Activity, Menu, X } from 'lucide-react';
 
@@ -33,8 +33,8 @@ lg:relative lg:translate-x-0
         </button>
       </div>
 
-      <img className="w-full object-contain dark:block" src={Logo} />
-      <img className="w-full object-contain dark:hidden " src={DarkLogo} />
+      <img className="w-full object-contain hidden dark:block" src={Logo} />
+      <img className="w-full object-contain block dark:hidden" src={DarkLogo} />
 
       <div className="p-6 border-b border-slate-200/50 dark:border-slate-700/50">
         <div className="flex items-center space-x-3">
