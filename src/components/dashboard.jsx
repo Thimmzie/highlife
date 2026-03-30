@@ -26,6 +26,7 @@ const dashboard = () => {
           onToggle={() => setSideBarCollapse(!sideBarCollapsed)}
           currentPage={currentPage}
           onPageChange={setCurrentPage}
+          onClose={() => setSideBarCollapse(true)}
         />
         {!sideBarCollapsed && (
           <div

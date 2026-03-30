@@ -5,7 +5,13 @@ import DarkLogo from '../assets/images/blackk-logo.png';
 import { menuItems } from '../../constant/index';
 import { Activity, Menu, X } from 'lucide-react';
 
-const sidebar = ({ collapsed, onToggle, currentPage, onPageChange }) => {
+const sidebar = ({
+  collapsed,
+  onToggle,
+  currentPage,
+  onPageChange,
+  onClose,
+}) => {
   const user = useUserStore((state) => state.user);
 
   return (
@@ -62,7 +68,13 @@ lg:relative lg:translate-x-0
           return (
             <div
               key={item.id}
-              onClick={() => onPageChange(item.id)}
+              onClick={() => {
+                onPageChange(item.id);
+
+                if (window.innerWidth < 1024) {
+                  onClose();
+                }
+              }}
               className={`flex items-center space-x-3 px-4 py-3 rounded-xl cursor-pointer  transition-all duration-300 ease-in-out
         ${
           isActive
