@@ -15,7 +15,7 @@ const sidebar = ({ collapsed, onToggle, currentPage, onPageChange }) => {
     lg:transition-all lg:duration-300 lg:ease-in-out 
     bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl 
     border-r border-slate-200/50 dark:border-slate-700/50 
-    flex flex-col z-10
+    flex flex-col z-10 
 
 
     lg:relative
@@ -24,7 +24,7 @@ const sidebar = ({ collapsed, onToggle, currentPage, onPageChange }) => {
    fixed top-0 left-0 h-full z-30
 transform ${collapsed ? '-translate-x-full' : 'translate-x-0'}
 transition-transform duration-300 ease-in-out
-lg:relative lg:translate-x-0
+lg:relative lg:translate-x-0 
   `}
     >
       <div className="lg:hidden flex justify-end p-4">

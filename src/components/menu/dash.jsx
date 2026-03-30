@@ -6,7 +6,7 @@ import Simulationpanel from '../simulationpanel';
 
 const dash = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-h-[160vh] lg:min-h-screen">
       <Summarycards />
       <Charts />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
