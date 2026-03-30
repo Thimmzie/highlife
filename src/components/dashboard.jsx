@@ -19,7 +19,7 @@ const dashboard = () => {
   }, []);
 
   return (
-    <div className="min-h-[200vh] lg:min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:t0-slate-900 transition-all duration-500 ">
+    <div className="min-h-[200vh] lg:min-h-screen  transition-all duration-500 bg-slate-300 dark:bg-slate-800">
       <div className="lg:flex h-screen lg:overflow-hidden">
         <Sidebar
           collapsed={sideBarCollapsed}
